@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Zakat Calculator</title>
+ <link rel="stylesheet" type="text/css" href="tools.css">
+ <script>
+ function kira(btn){
+ let yearlyIncome=parseFloat(document.getElementById("yearlyIncome").value);
+ let x=0;
+ alert(yearlyIncome);
+ if(btn.value=="check")
+ x = yearlyIncome * 0.025;
+ document.getElementById("result").innerHTML="Zakat Income = RM" +
+x.toFixed(2);
+ }
+ </script>
+ </head>
+ <body>
+ <h1>Zakat Calculator</h1>
+ <hr>
+ <input type="number" id="yearlyIncome">
+ <input type="submit" value="check" id="checkIncome" onclick="kira(this)">
+ <p>Zakat: 2.5% yearly Income</p>
+ <div id="result">
+ </div>
+ </body>
+ </html>
